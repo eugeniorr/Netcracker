@@ -9,6 +9,15 @@
     <p th:text="'Hello, ' + ${world} + '!'" />
 
     <div>
+        <h1>Добавление студента</h1>
+        <form method="post">
+            <input type="text" name="studentName" placeholder="Введите имя студента">
+            <input type="text" name="studentAge" placeholder="Введите возраст студента">
+            <button type="submit">Добавить студента</button>
+        </form>
+    </div>
+
+    <div>
         <h1>Вывод из БД</h1>
         <div th:each="el : ${students}">
             <div th:text="${el.id}"/>
@@ -16,15 +25,6 @@
             <div th:text="${el.studentAge}"/>
             <br/>
         </div>
-    </div>
-
-    <div>
-        <h1>Добавление студента</h1>
-        <form method="post">
-            <input type="text" name="studentName" placeholder="Введите имя студента">
-            <input type="text" name="studentAge" placeholder="Введите возраст студента">
-            <button type="submit">Добавить студента</button>
-        </form>
     </div>
 
 </body>
